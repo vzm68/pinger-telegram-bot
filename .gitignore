@@ -34,7 +34,7 @@ MANIFEST
 *.spec
 
 # PyCharm
-.idea
+.idea/
 
 # Installer logs
 pip-log.txt
