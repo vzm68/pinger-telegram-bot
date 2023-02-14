@@ -1,7 +1,7 @@
 from environs import Env
 
 ip_list = {
-    '10.100.3.228': [True, 0],
+    '127.0.0.1': [True, 0],
     '127.0.0.2': [True, 0]
 }
 
