@@ -56,7 +56,7 @@ async def pinger_7(dp: Dispatcher, time=''):
                 ip_list[ip][1] = 0
                 if ip_list[ip][0] is False:
                     ip_list[ip][0] = True
-                    await dp.bot.send_message(text=f'{diff_dates(time, login)}', chat_id=chat_id)
+                    await dp.bot.send_message(text=f'{diff_dates(time, login)}', chat_id=group_id)
             else:
                 if ip_list[ip][1] >= 3:
                     continue
@@ -64,7 +64,7 @@ async def pinger_7(dp: Dispatcher, time=''):
                     ip_list[ip][1] += 1
                 if ip_list[ip][0] is True and ip_list[ip][1] == 3:
                     ip_list[ip][0] = False
-                    await dp.bot.send_message(text=f'{login}\n\n🌐 Lost connection :(', chat_id=chat_id)
+                    await dp.bot.send_message(text=f'{login}\n\n🌐 Lost connection :(', chat_id=group_id)
                     time = datetime.now().strftime('%Y-%m-%d %H:%M')
                     logging.info(f"Lost connection at {time}")
         await asyncio.sleep(1)
